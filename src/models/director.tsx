@@ -3,7 +3,6 @@ export interface Director {
   given_name: string;
   family_name: string;
   birth_place: string;
-  nationality: string;
   date_of_birth: Date;
   date_of_death?: Date;
   hq_lat: number;
