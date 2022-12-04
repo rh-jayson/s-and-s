@@ -25,9 +25,9 @@ export const Directors: FC = () => {
       {error && <h3>{error}</h3>}
       {directors.length > 0 && (
         <ul>
-          {directors.map((director) => {
+          {directors.map((director: Director, index: number) => {
             return (
-              <li>
+              <li key={index}>
                 {director.given_name} {director.family_name}
               </li>
             );

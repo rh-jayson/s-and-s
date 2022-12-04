@@ -25,10 +25,10 @@ export const Films: FC = () => {
       {error && <h3>{error}</h3>}
       {films.length > 0 && (
         <ul>
-          {films.map((films) => {
+          {films.map((film: Film, index: number) => {
             return (
-              <li>
-                {films.title} ({films.release_year})
+              <li key={index}>
+                {film.title} ({film.release_year})
               </li>
             );
           })}
