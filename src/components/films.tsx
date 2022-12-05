@@ -9,8 +9,8 @@ export const Films: FC = () => {
 
   useEffect(() => {
     axios
-      .get("https://express-and-s.onrender.com/films")
-      // .get("http://localhost:3001/films")
+      // .get("https://express-and-s.onrender.com/films")
+      .get("http://localhost:3001/films")
       .then((res) => {
         setFilms(res.data);
       })

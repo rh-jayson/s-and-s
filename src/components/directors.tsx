@@ -9,8 +9,8 @@ export const Directors: FC = () => {
 
   useEffect(() => {
     axios
-      .get("https://express-and-s.onrender.com/directors")
-      // .get("http://localhost:3001/directors")
+      // .get("https://express-and-s.onrender.com/directors")
+      .get("http://localhost:3001/directors")
       .then((res) => {
         setDirectors(res.data);
       })

@@ -12,11 +12,9 @@ export const Layout: FC<Props> = ({ children }) => {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      {/* <Navbar /> */}
       <NavButtons />
-      {/* <Container maxWidth="xl">{children}</Container> */}
       {children}
-      {/* <Footer /> */}
+      <Footer />
     </ThemeProvider>
   );
 };
