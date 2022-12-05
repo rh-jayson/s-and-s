@@ -1,6 +1,7 @@
 import { FC, useEffect, useState } from "react";
 import axios from "axios";
-import { Director } from "../models/director";
+import { Director, directorColumns } from "../models/director";
+import { DataGrid } from "@mui/x-data-grid";
 
 export const Directors: FC = () => {
   const [error, setError] = useState(null);
@@ -9,6 +10,7 @@ export const Directors: FC = () => {
   useEffect(() => {
     axios
       .get("https://express-and-s.onrender.com/directors")
+      // .get("http://localhost:3001/directors")
       .then((res) => {
         setDirectors(res.data);
       })
@@ -20,19 +22,21 @@ export const Directors: FC = () => {
   return (
     <>
       <h1>Directors</h1>
-      <hr />
-      <h2>Director stuff will go here.</h2>
       {error && <h3>{error}</h3>}
       {directors.length > 0 && (
-        <ul>
-          {directors.map((director: Director, index: number) => {
-            return (
-              <li key={index}>
-                {director.given_name} {director.family_name}
-              </li>
-            );
-          })}
-        </ul>
+        <div style={{ height: "600px", width: "100%" }}>
+          <DataGrid
+            rows={directors.map((director: Director, index: number) => {
+              return {
+                id: director.id,
+                name: `${director.given_name} ${director.family_name}`,
+                birth_place: director.birth_place,
+                date_of_birth: director.date_of_birth,
+              };
+            })}
+            columns={directorColumns}
+          />
+        </div>
       )}
     </>
   );
