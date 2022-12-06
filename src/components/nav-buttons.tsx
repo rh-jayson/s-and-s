@@ -8,13 +8,19 @@ const images = [
   {
     src: "/images/2001.png",
     title: "Films",
-    width: "50%",
+    width: "33%",
     url: "/films",
+  },
+  {
+    src: "",
+    title: "Home",
+    width: "34%",
+    url: "/",
   },
   {
     src: "/images/agnes.png",
     title: "Directors",
-    width: "50%",
+    width: "33%",
     url: "/directors",
   },
 ];

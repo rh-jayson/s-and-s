@@ -7,17 +7,17 @@ export const Directors: FC = () => {
   const [error, setError] = useState(null);
   const [directors, setDirectors] = useState<Director[]>([]);
 
-  useEffect(() => {
-    axios
-      // .get("https://express-and-s.onrender.com/directors")
-      .get("http://localhost:3001/directors")
-      .then((res) => {
-        setDirectors(res.data);
-      })
-      .catch((err) => {
-        setError(err);
-      });
-  }, []);
+  // useEffect(() => {
+  //   axios
+  //     // .get("https://express-and-s.onrender.com/directors")
+  //     .get("http://localhost:3001/directors")
+  //     .then((res) => {
+  //       setDirectors(res.data);
+  //     })
+  //     .catch((err) => {
+  //       setError(err);
+  //     });
+  // }, []);
 
   return (
     <>

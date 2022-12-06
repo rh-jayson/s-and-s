@@ -1,6 +1,7 @@
 import { FC } from "react";
 import styled from "styled-components";
 import { gsap } from "gsap";
+import { Typography } from "@mui/material";
 
 const Window = styled.div`
   display: flex;
@@ -25,22 +26,20 @@ export const Dashboard: FC = () => {
   return (
     <>
       <Window style={{ backgroundColor: "#121212" }}>
+        <Typography>Homepage blurb</Typography>
         <Chart alt="img" src="/images/chart.svg" />
       </Window>
-      <Window style={{ backgroundColor: "#e5e7ce" }}>
+      <Window style={{ backgroundColor: "#113d8e" }}>
         <Chart alt="img" src="/images/chart.svg" />
+        <Typography>Map blurb</Typography>
       </Window>
       <Window style={{ backgroundColor: "#b4645a" }}>
+        <Typography>Cool fact</Typography>
         <Chart alt="img" src="/images/chart.svg" />
       </Window>
-      <Window style={{ backgroundColor: "#a4b8c4" }}>
+      <Window style={{ backgroundColor: "#29600c" }}>
         <Chart alt="img" src="/images/chart.svg" />
-      </Window>
-      <Window style={{ backgroundColor: "#f0eaea" }}>
-        <Chart alt="img" src="/images/chart.svg" />
-      </Window>
-      <Window style={{ backgroundColor: "#268355" }}>
-        <Chart alt="img" src="/images/chart.svg" />
+        <Typography>Something cool here as well</Typography>
       </Window>
     </>
   );
