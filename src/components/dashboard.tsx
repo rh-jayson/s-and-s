@@ -1,6 +1,5 @@
 import { FC } from "react";
 import styled from "styled-components";
-import { gsap } from "gsap";
 import { Typography } from "@mui/material";
 
 const Window = styled.div`

@@ -1,5 +1,16 @@
 import { Box, Link, Typography } from "@mui/material";
 import { FC } from "react";
+import styled from "styled-components";
+
+const FooterBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  background-color: #121212;
+  padding: 48px;
+  height: 200px;
+  align-items: center;
+  justify-content: center;
+`;
 
 function Links() {
   return (
@@ -16,10 +27,7 @@ function Links() {
 
 export const Footer: FC = () => {
   return (
-    <Box
-      sx={{ bgcolor: "background.paper", p: 6, height: "200px" }}
-      component="footer"
-    >
+    <FooterBox>
       <Typography
         variant="subtitle1"
         align="center"
@@ -29,6 +37,6 @@ export const Footer: FC = () => {
         I have no affiliation with BFI or Sight & Sound Magazine.
       </Typography>
       <Links />
-    </Box>
+    </FooterBox>
   );
 };
