@@ -7,17 +7,17 @@ export const Films: FC = () => {
   const [error, setError] = useState(null);
   const [films, setFilms] = useState<Film[]>([]);
 
-  useEffect(() => {
-    axios
-      .get("https://express-and-s.onrender.com/films")
-      // .get("http://localhost:3001/films")
-      .then((res) => {
-        setFilms(res.data);
-      })
-      .catch((err) => {
-        setError(err);
-      });
-  }, []);
+  // useEffect(() => {
+  //   axios
+  //     // .get("https://express-and-s.onrender.com/films")
+  //     .get("http://localhost:3001/films")
+  //     .then((res) => {
+  //       setFilms(res.data);
+  //     })
+  //     .catch((err) => {
+  //       setError(err);
+  //     });
+  // }, []);
 
   return (
     <>

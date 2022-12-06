@@ -16,7 +16,10 @@ function Links() {
 
 export const Footer: FC = () => {
   return (
-    <Box sx={{ bgcolor: "background.paper", p: 6 }} component="footer">
+    <Box
+      sx={{ bgcolor: "background.paper", p: 6, height: "200px" }}
+      component="footer"
+    >
       <Typography
         variant="subtitle1"
         align="center"
